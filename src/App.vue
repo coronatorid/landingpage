@@ -1,16 +1,17 @@
 <template>
   <div>
-    <Nav/>
+    <Nav />
+    <div></div>
   </div>
 </template>
 
 <script>
-import Nav from './components/Nav'
+import Nav from "./components/Nav";
 
 export default {
-  name: 'Coronator',
+  name: "Coronator",
   components: {
-    Nav
-  }
-}
+    Nav,
+  },
+};
 </script>
