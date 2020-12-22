@@ -11,7 +11,7 @@ const Header = (props) => {
       </div>
       <div className="flex">
         <div className="my-auto mx-3">
-          <a href="" className="text-gray-200 font-normal outline-none no-underline hover:no-underline">Support</a>
+          <a href="https://github.com/coronatorid" className="text-gray-200 font-normal outline-none no-underline hover:no-underline">Support</a>
         </div>
         <div className="my-auto mx-1 inline">
           <button

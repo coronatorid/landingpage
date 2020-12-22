@@ -1,34 +1,34 @@
-import {useState} from 'react';
+import { useState } from 'react';
 
 const Index = (props) => {
   const [services, _] = useState([
     {
-      title: 'Create tasks with a clear, achievable goal.',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum saepe amet incidunt blanditiis placeat quam'
+      title: 'High Accuracy Location Tracking',
+      desc: 'Aplikasi coronator didesign untuk mengambil lokasi menggunakan GPS dengan akurasi yang tinggi dan memungkinkan untuk pengembangan fitur-fitur lain lebih jauh kedepan.'
     },
     {
-      title: 'Create tasks with a clear, achievable goal.',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum saepe amet incidunt blanditiis placeat quam'
+      title: 'Open Source',
+      desc: 'Coronator dibuat dengan menggunakan metode open source dimana semua orang bisa berkontribusi dan source code-nya terbuka untuk umum agar bisa dipelajari, direview, diubah, ditingkatkan dan disebarluaskan.'
     },
     {
-      title: 'Create tasks with a clear, achievable goal.',
-      desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum saepe amet incidunt blanditiis placeat quam'
+      title: 'Secure',
+      desc: 'Kami menggunakan best practice keamanan seperti oauth, OTP dan hashing untuk data-data penting yang masuk kedalam basis data coronator.'
     },
   ]);
-  
+
   return (
     <div>
       <section className="section ">
         <div className="container min-h-52 flex items-center justify-center">
           <div className="py-5 md:py-8">
             <div className="mb-6">
-              <img src="/icons/logo.png" alt="" className="h-20 w-20 mx-auto"/>
+              <img src="/icons/logo.png" alt="" className="h-20 w-20 mx-auto" />
             </div>
             <h1 className="text-center font-title">
-              CORONATORID
+              CORONATOR
             </h1>
             <p className="text-center max-w-screen-md mb-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum saepe amet incidunt blanditiis placeat quam eius doloremque facilis perferendis magnam praesentium voluptate in fuga repellendus, libero beatae tempora officia harum.
+              Satu langkah maju untuk menuju aplikasi <b>"perfect contact tracing"</b>. Ikuti perjuangan kami <a href="https://github.com/coronatorid" className="underline text-blue-400">disini</a>.
             </p>
             <div className="text-center">
               <span className="rounded-lg bg-lotus px-3 py-2 text-gray-100 font-semiboldd text-3xl tracking-widest font-title font-bold mx-auto inline-block">
