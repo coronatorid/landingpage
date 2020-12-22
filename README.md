@@ -1,24 +1,21 @@
-# landingpage
+# Landing Page for Coronator
 
-## Project setup
-```
+### Install packages
+
+```bash
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+### Run in development server
+
+```bash
+yarn dev
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+### Build and serve in production
+```bash
+> yarn build 
+> yarn start
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Official NextJS Website](https://nextjs.org/)

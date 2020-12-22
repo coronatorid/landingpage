@@ -2,6 +2,10 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'title': ['Montserrat'],
+      'body': ['Hind', 'Open Sans']
+    },
     extend: {
       colors: {
         wewak: "#F19091",
@@ -11,10 +15,6 @@ module.exports = {
         froly: "#ed6061",
         gainsboro: "#dfdfdf",
         grey: "#7a7a7a",
-      },
-      fontFamily: {
-        'title': ['Montserrat'],
-        'body': ['Hind']
       },
     },
   },
