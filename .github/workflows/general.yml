@@ -1,0 +1,20 @@
+name: Publish Docker image
+on:
+  release:
+    types: [published]
+jobs:
+  push_to_registry:
+    name: Push Docker image to GitHub Packages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Login docker
+        run: echo ${{ secrets.DEPLOYMENT_PAT }} | sudo docker login ghcr.io -u ${{ secrets.DEPLOYMENT_USERNAME }} --password-stdin
+
+      - name: Build docker image
+        run: make build
+
+      - name: Push docker image
+        run: make push
