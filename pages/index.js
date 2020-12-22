@@ -32,7 +32,7 @@ const Index = (props) => {
             </p>
             <div className="text-center">
               <span className="rounded-lg bg-lotus px-3 py-2 text-gray-100 font-semiboldd text-3xl tracking-widest font-title font-bold mx-auto inline-block">
-                v 1.0.0
+                Beta v0.0.1
               </span>
             </div>
           </div>
