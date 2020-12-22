@@ -1,4 +1,4 @@
-# Landing page for Coronator
+# Landing Page for Coronator
 
 ### Install packages
 
