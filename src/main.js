@@ -1,6 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './assets/css/tailwind.css'
+import './assets/css/tailwind.scss'
 import './assets/css/font.css'
+import router from './router/index';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+
+app.use(router);
+
+app.mount('#app');
