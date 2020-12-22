@@ -1,11 +1,11 @@
-import Nav from '../components/Nav';
+import Header from '../components/Header';
 import '../styles/font.css';
 import '../styles/tailwind.scss';
 
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Nav />
+      <Header />
       <div>
         <Component {...pageProps} />
       </div>
