@@ -3,7 +3,7 @@ import { useState } from 'react';
 const Index = (props) => {
   const [services, _] = useState([
     {
-      title: 'High Accuracy Location Tracking',
+      title: 'Location Tracking',
       desc: 'Aplikasi coronator didesign untuk mengambil lokasi menggunakan GPS dengan akurasi yang tinggi dan memungkinkan untuk pengembangan fitur-fitur lain lebih jauh kedepan.'
     },
     {
