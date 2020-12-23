@@ -5,14 +5,12 @@ RUN apk update && apk upgrade
 ENV NODE_ENV production
 RUN mkdir -p /app
 
-# Removing node modules, we don't need it in production.
-RUN rm -rf ./node_modules
-
-RUN yarn build
-
 WORKDIR /app
 
 COPY . ./
+
+RUN yarn
+RUN yarn build
 
 EXPOSE 3000
 
