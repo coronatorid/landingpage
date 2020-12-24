@@ -18,3 +18,24 @@ jobs:
 
       - name: Push docker image
         run: make push
+
+  deployment:
+    name: Deploy landingpage into production
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+        with:
+          name: coronatorid/contooling
+
+      - name: Check out the repo
+        env:
+          SERVICE: landingpage
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOYMENT_PRIVATE_KEY }}
+          SSH_PUBLIC_KEY: ${{ secrets.DEPLOYMENT_PUBLIC_KEY }}
+          SERVER_USER: ${{ secrets.DEPLOYMENT_LANDINGPAGE_USER }}
+          SERVER_HOST: ${{ secrets.DEPLOYMENT_LANDINGPAGE_HOST }}
+          USERPASSWORD: ${{ secrets.DEPLOYMENT_LANDINGPAGE_PASSWORD }}
+        run: |
+          export RELEASE_TAG=$(git show -q --format=%h)
+          sh ./general/deploy.sh >> muted_output
