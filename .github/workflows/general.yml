@@ -27,7 +27,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
         with:
-          name: coronatorid/contooling
+          repository: coronatorid/contooling
 
       - name: Deploy the services
         env:
@@ -39,6 +39,5 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DEPLOYMENT_PAT }}
           DOCKER_USERNAME: ${{ secrets.DEPLOYMENT_USERNAME }}
         run: |
-          ls -la
           export RELEASE_TAG=$(echo $GITHUB_SHA | awk '{print substr($0,0,7)}')
           bash ./general/deploy.sh
