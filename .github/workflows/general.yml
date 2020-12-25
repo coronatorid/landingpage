@@ -33,9 +33,10 @@ jobs:
           SERVICE: landingpage
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOYMENT_PRIVATE_KEY }}
           SSH_PUBLIC_KEY: ${{ secrets.DEPLOYMENT_PUBLIC_KEY }}
-          SERVER_USER: ${{ secrets.DEPLOYMENT_LANDINGPAGE_USER }}
-          SERVER_HOST: ${{ secrets.DEPLOYMENT_LANDINGPAGE_HOST }}
-          USERPASSWORD: ${{ secrets.DEPLOYMENT_LANDINGPAGE_PASSWORD }}
+          SERVER_USER: root
+          SERVER_HOST: ${{ secrets.DEPLOYMENT_HOST_01 }}
+          DOCKER_PASSWORD: ${{ secrets.DEPLOYMENT_PAT }}
+          DOCKER_USERNAME: ${{ secrets.DEPLOYMENT_USERNAME }}
         run: |
-          export RELEASE_TAG=$(git show -q --format=%h)
-          sh ./general/deploy.sh >> muted_output
+          export RELEASE_TAG=$(echo $GITHUB_SHA | awk '{print substr($0,0,7)}')
+          bash ./general/deploy.sh
