@@ -1,5 +1,7 @@
 # Landing Page for Coronator
 
+Coronator landing page and crew site for administrational purposes.
+
 ### Install packages
 
 ```bash
@@ -14,8 +16,6 @@ yarn dev
 
 ### Build and serve in production
 ```bash
-> yarn build 
+> yarn build
 > yarn start
-```
-
-[Official NextJS Website](https://nextjs.org/)
+``
