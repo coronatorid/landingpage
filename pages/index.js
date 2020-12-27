@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head'
 
 const Index = (props) => {
   const [services, _] = useState([
@@ -18,6 +19,13 @@ const Index = (props) => {
 
   return (
     <div>
+      <Head>
+        <title>Coronator - Indonesia Covid Application</title>
+        <meta property="og:title" content="Coronator - Indonesia Covid Application" key="title" />
+      </Head>
+      <Head>
+        <meta property="og:title" content="Indonesia Covid Applicationlication" key="title" />
+      </Head>
       <section className="section ">
         <div className="container min-h-52 flex items-center justify-center">
           <div className="py-5 md:py-8">
