@@ -64,6 +64,21 @@ const Index = (props) => {
           }
         </div>
       </section>
+      <section className="section">
+        <h2 className="text-center">
+          The Story
+        </h2>
+        <div className="container min-h-52 flex items-center justify-center">
+          <div className="py-5 md:py-8">
+            <p className="text-center max-w-screen-md mb-5">
+              Awal pembuatan aplikasi ini dimulai ketika muncul sebuah ide tentang sistem mandiri yang bisa menanggulangi covid-19 dengan kontribusi masyarakat sehingga tercipta sebuah informasi yang mendukung untuk pengambilan keputusan pengguna yang ada didalam aplikasi ini. Aplikasi ini juga harapanya bisa mengurangi penambahan kasus positif covid-19 di Indonesia.
+            </p>
+          </div>
+        </div>
+        <div className="container min-h-52 flex items-center justify-center">
+          <iframe className="text-center" width="560" height="315" src="https://www.youtube.com/embed/jibQJOR1zB4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section>
     </div>
   )
 }
