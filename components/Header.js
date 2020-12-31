@@ -13,13 +13,13 @@ const Header = (props) => {
         <div className="my-auto mx-3">
           <a href="https://kitabisa.com/campaign/coronator" className="text-gray-200 font-normal outline-none no-underline hover:no-underline">Support</a>
         </div>
-        <div className="my-auto mx-1 inline">
+        {/* <div className="my-auto mx-1 inline">
           <button
             className="bg-white p-2 font-medium rounded shadow focus:outline-none hover:bg-gray-200"
           >
             <div className="font-normal text-xs">DOWNLOAD</div>
           </button>
-        </div>
+        </div> */}
       </div>
     </header>
   )
