@@ -31,7 +31,7 @@ const Provider = (props) => {
 
   useEffect(() => {
     if(isInitialized) {
-      localStorageData.set(storageKey, contributors, (60 * 60 * 24 * 3));
+      localStorageData.set(storageKey, contributors, (60 * 60 * 24));
     }
   }, [contributors]);
 
