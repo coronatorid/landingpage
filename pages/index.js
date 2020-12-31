@@ -1,7 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import Head from 'next/head'
 
+import ContributorsContext from '../contexts/ContributorsContext';
+import Contributor from '../components/Contributor';
+import localStorageData from '../utils/localStorageData';
+
 const Index = (props) => {
+  const {contributors, fetchContributors} = useContext(ContributorsContext.Context);
+
   const [services, _] = useState([
     {
       title: 'Location Tracking',
@@ -52,9 +58,9 @@ const Index = (props) => {
       <section className="section">
         <div className="container grid grid-cols-1 md:grid-cols2 lg:grid-cols-3 gap-4">
           {
-            services.map((service) => {
+            services.map((service, index) => {
               return (
-                <div className="pb-8">
+                <div className="pb-8" key={index}>
                   <h3 className="font-title">
                     {service.title}
                   </h3>
@@ -79,9 +85,37 @@ const Index = (props) => {
           </div>
         </div>
         <div className="container min-h-52 flex items-center justify-center">
-          <iframe className="text-center" width="560" height="315" src="https://www.youtube.com/embed/jibQJOR1zB4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe
+            className="text-center"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/jibQJOR1zB4"
+            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen={true}>
+          </iframe>
         </div>
       </section>
+
+      {
+        !contributors.length
+          || (
+            <section className="section">
+              <h2 className="text-center">
+                Meet the Fighters
+              </h2>
+              <div className="container flex flex-wrap justify-center">
+                {
+                  contributors.map((contributor) => {
+                    return (
+                      <Contributor contributor={contributor} key={contributor.login} />
+                    )
+                  })
+                }
+              </div>
+            </section>
+          )
+      }
+
     </div>
   )
 }

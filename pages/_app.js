@@ -1,15 +1,18 @@
 import Header from '../components/Header';
 import '../styles/font.css';
 import '../styles/tailwind.scss';
+import ContributorsContext from '../contexts/ContributorsContext';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
-      <Header />
+    <ContributorsContext.Provider>
       <div>
-        <Component {...pageProps} />
+        <Header />
+        <div>
+          <Component {...pageProps} />
+        </div>
       </div>
-    </div>
+    </ContributorsContext.Provider>
   )
 }
 
