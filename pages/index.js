@@ -37,7 +37,10 @@ const Index = (props) => {
               CORONATOR
             </h1>
             <p className="text-center max-w-screen-md mb-5">
-              Satu langkah maju untuk menuju aplikasi <b>"perfect contact tracing"</b>. Ikuti perjuangan kami <a href="https://github.com/coronatorid" className="underline text-blue-400">disini</a>.
+              Satu langkah maju untuk menuju aplikasi <b>"perfect contact tracing"</b>.
+            </p>
+            <p className="text-center max-w-screen-md mb-5">
+              Ikuti perjuangan dan update terbaru kami <a href="https://kitabisa.com/campaign/coronator" className="underline text-blue-400">disini</a>.
             </p>
             <div className="text-center">
               <span className="rounded-lg bg-lotus px-3 py-2 text-gray-100 font-semiboldd text-3xl tracking-widest font-title font-bold mx-auto inline-block">
