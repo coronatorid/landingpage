@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import ContributorsContext from '../contexts/ContributorsContext';
 import Contributor from '../components/Contributor';
+import localStorageData from '../utils/localStorageData';
 
 const Index = (props) => {
   const {contributors, fetchContributors} = useContext(ContributorsContext.Context);

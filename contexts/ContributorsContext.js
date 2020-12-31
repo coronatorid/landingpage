@@ -1,5 +1,6 @@
 import axios from 'axios';
 import {useState, createContext, useEffect} from 'react';
+import localStorageData from '../utils/localStorageData';
 
 const storageKey = 'contributors';
 
@@ -30,17 +31,16 @@ const Provider = (props) => {
 
   useEffect(() => {
     if(isInitialized) {
-      localStorage.setItem(storageKey, JSON.stringify(contributors));
+      localStorageData.set(storageKey, contributors, (60 * 60 * 24 * 3));
     }
   }, [contributors]);
 
   useEffect(() => {
     if(!isInitialized) {
-      const localData = localStorage.getItem(storageKey);
+      const localData = localStorageData.get(storageKey);
       if(localData) {
-        const data = JSON.parse(localData) || [];
-        if(data.length) {
-          setContributors(JSON.parse(localData));
+        if(localData.length) {
+          setContributors(localData);
         } else {
           fetchContributors();
         }
@@ -51,29 +51,51 @@ const Provider = (props) => {
     setIsInitialized(true);
   }, []);
 
+  /**
+   * @returns {void}
+   */
   async function fetchContributors() {
     try {
       const allContributorsFromRepos = await Promise.all(repos.map((repo) => {
         return fetchContributorsFromRepo(repo);
       }));
 
-      const mergedContributors = Array.from(allContributorsFromRepos).flat();
+      const mergedContributors = Array.from(allContributorsFromRepos).flat().map((contributor) => {
+        const {
+          id,
+          login,
+          avatar_url,
+          url,
+        } = contributor;
+
+        return {
+          id,
+          login,
+          avatar_url,
+          url
+        };
+      });
 
       const seen = new Set();
 
-      const uniqueContributorsByUsername = mergedContributors.filter((contributor) => {
+      const uniqueContributors = mergedContributors.filter((contributor) => {
         const duplicateItem = seen.has(contributor.id);
         seen.add(contributor.id);
         return !duplicateItem;
       });
 
-      setContributors(uniqueContributorsByUsername);
+      setContributors(uniqueContributors);
 
     } catch (error) {
       console.log(error);
     }
   }
 
+  /**
+   *
+   * @param {object} repo
+   * @returns {array}
+   */
   async function fetchContributorsFromRepo(repo) {
     try {
       const response = await axios.get(repo.url);
