@@ -1,13 +1,8 @@
 import { useState, useContext, useEffect } from 'react';
 import Head from 'next/head'
-
-import ContributorsContext from '../contexts/ContributorsContext';
-import Contributor from '../components/Contributor';
-import localStorageData from '../utils/localStorageData';
+import Contributors from '../components/Contributors';
 
 const Index = (props) => {
-  const {contributors, fetchContributors} = useContext(ContributorsContext.Context);
-
   const [services, _] = useState([
     {
       title: 'Location Tracking',
@@ -24,7 +19,7 @@ const Index = (props) => {
   ]);
 
   return (
-    <div>
+    <>
       <Head>
         <title>Coronator - Indonesia Covid Application</title>
         <meta property="og:title" content="Coronator - Indonesia Covid Application" key="title" />
@@ -95,28 +90,10 @@ const Index = (props) => {
           </iframe>
         </div>
       </section>
-
-      {
-        !contributors.length
-          || (
-            <section className="section">
-              <h2 className="text-center">
-                Meet the Fighters
-              </h2>
-              <div className="container flex flex-wrap justify-center">
-                {
-                  contributors.map((contributor) => {
-                    return (
-                      <Contributor contributor={contributor} key={contributor.login} />
-                    )
-                  })
-                }
-              </div>
-            </section>
-          )
-      }
-
-    </div>
+      <section className="section">
+        <Contributors />
+      </section>
+    </>
   )
 }
 

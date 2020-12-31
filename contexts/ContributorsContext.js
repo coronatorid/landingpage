@@ -9,6 +9,7 @@ const Context = createContext();
 const Provider = (props) => {
   const [contributors, setContributors] = useState([]);
   const [isInitialized, setIsInitialized] = useState(false);
+  const [isCached, setIsCached] = useState(false);
 
   const repos = [
     {
@@ -30,18 +31,23 @@ const Provider = (props) => {
   ];
 
   useEffect(() => {
-    if(isInitialized) {
+    if(isInitialized && !isCached) {
       localStorageData.set(storageKey, contributors, (60 * 60 * 24));
     }
   }, [contributors]);
 
-  useEffect(() => {
+  /**
+   * @returns {void}
+   */
+  function initialize() {
     if(!isInitialized) {
       const localData = localStorageData.get(storageKey);
       if(localData) {
         if(localData.length) {
+          setIsCached(true);
           setContributors(localData);
         } else {
+          setIsCached(false);
           fetchContributors();
         }
       } else {
@@ -49,7 +55,7 @@ const Provider = (props) => {
       }
     }
     setIsInitialized(true);
-  }, []);
+  }
 
   /**
    * @returns {void}
@@ -108,7 +114,8 @@ const Provider = (props) => {
 
   return (
     <Context.Provider value={{
-      contributors
+      contributors,
+      initialize,
     }}>
       {props.children}
     </Context.Provider>
