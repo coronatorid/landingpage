@@ -19,8 +19,8 @@ const Contributor = (props) => {
       }}>
         {contributor.login}
       </div>
-      <div className="m-3 w-24 flex flex-col items-center">
-        <div className="h-20 w-20 rounded-md overflow-hidden shadow-lg">
+      <div className="m-3 w-20 flex flex-col items-center">
+        <div className="h-16 w-16 rounded-md overflow-hidden shadow-lg">
           <img src={contributor.avatar_url} alt="contributor..." className="w-full h-full object-center object-cover"/>
         </div>
       </div>

@@ -1,18 +1,20 @@
 import Header from '../components/Header';
+import Footer from '../components/Footer';
+import RootContextProvider from '../contexts/RootContextProvider';
 import '../styles/font.css';
 import '../styles/tailwind.scss';
-import ContributorsContext from '../contexts/ContributorsContext';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ContributorsContext.Provider>
+    <RootContextProvider>
       <div>
         <Header />
         <div>
           <Component {...pageProps} />
         </div>
+        <Footer />
       </div>
-    </ContributorsContext.Provider>
+    </RootContextProvider>
   )
 }
 
