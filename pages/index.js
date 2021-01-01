@@ -23,9 +23,7 @@ const Index = (props) => {
       <Head>
         <title>Coronator - Indonesia Covid Application</title>
         <meta property="og:title" content="Coronator - Indonesia Covid Application" key="title" />
-      </Head>
-      <Head>
-        <meta property="og:title" content="Indonesia Covid Applicationlication" key="title" />
+        <meta name="Description" content="Aplikasi contact tracing untuk membantu mengatasi virus corona" />
       </Head>
       <section className="section ">
         <div className="container min-h-52 flex items-center justify-center">
@@ -81,6 +79,7 @@ const Index = (props) => {
         </div>
         <div className="container min-h-52 flex items-center justify-center">
           <iframe
+            title="Cerita tentang coronator"
             className="text-center"
             width="560"
             height="315"
