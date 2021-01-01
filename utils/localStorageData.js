@@ -14,8 +14,8 @@ function get(key) {
 
   const data = JSON.parse(localStorage.getItem(key) || JSON.stringify(defaultData));
 
-  if(data.expire > 0) {
-    if(time > data.expire) {
+  if (data.expire > 0) {
+    if (time > data.expire) {
       localStorage.removeItem(key);
       return null;
     }

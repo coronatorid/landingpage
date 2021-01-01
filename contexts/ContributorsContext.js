@@ -1,6 +1,5 @@
 import axios from 'axios';
-import {useState, createContext, useEffect} from 'react';
-import localStorageData from '../utils/localStorageData';
+import { useState, createContext, useEffect } from 'react';
 
 const storageKey = 'contributors';
 
@@ -8,8 +7,6 @@ const Context = createContext();
 
 const Provider = (props) => {
   const [contributors, setContributors] = useState([]);
-  const [isInitialized, setIsInitialized] = useState(false);
-  const [isCached, setIsCached] = useState(false);
 
   const repos = [
     {
@@ -30,31 +27,11 @@ const Provider = (props) => {
     },
   ];
 
-  useEffect(() => {
-    if(isInitialized && !isCached) {
-      localStorageData.set(storageKey, contributors, (60 * 60 * 24));
-    }
-  }, [contributors]);
-
   /**
    * @returns {void}
    */
   function initialize() {
-    if(!isInitialized) {
-      const localData = localStorageData.get(storageKey);
-      if(localData) {
-        if(localData.length) {
-          setIsCached(true);
-          setContributors(localData);
-        } else {
-          setIsCached(false);
-          fetchContributors();
-        }
-      } else {
-        fetchContributors();
-      }
-    }
-    setIsInitialized(true);
+    fetchContributors();
   }
 
   /**
