@@ -41,11 +41,16 @@ const Index = (props) => {
             <p className="text-center max-w-screen-md mb-5">
               Ikuti perjuangan dan update terbaru kami <a href="https://kitabisa.com/campaign/coronator" className="underline text-blue-400">disini</a>.
             </p>
-            <div className="text-center">
+            <div className="text-center mb-5">
               <span className="rounded-lg bg-lotus px-3 py-2 text-gray-100 font-semiboldd text-3xl tracking-widest font-title font-bold mx-auto inline-block">
                 Beta v0.0.1
               </span>
             </div>
+            {/* <div className="text-center">
+              <a href="/" className="inline-block h-16">
+                <img src="/images/google-play-badge.png" alt="download google play" className="h-full w-auto"/>
+              </a>
+            </div> */}
           </div>
         </div>
       </section>

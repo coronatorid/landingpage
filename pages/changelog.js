@@ -55,27 +55,6 @@ const Changelog = (props) => {
     }
   }
 
-  const hardcodedChangelogData = [
-    {
-      type: 'new',
-      dateString: 'October 27, 2020',
-      list: [
-        'Coronator now can detect people ',
-        'Coronator now can lorem ',
-        'Notification Email while doing blabla',
-      ]
-    },
-    {
-      type: 'improved',
-      dateString: 'October 21, 2020',
-      list: [
-        'lorem ipsum dolor sir amet',
-        'hey heo heo',
-        'Notification Email while doing blabla',
-      ]
-    }
-  ];
-
   /**
    * @returns {string}
    */
@@ -103,7 +82,7 @@ const Changelog = (props) => {
   return (
     <Fragment>
       <section className="section">
-        <div className="container">
+        <div className="container max-w-screen-md">
           <h2 className="mb-5">
             Changelog
           </h2>
@@ -111,26 +90,22 @@ const Changelog = (props) => {
             changelogData.map((changelogItem) => {
               return (
                 <div key={changelogItem.id} className="mb-5 border border-gray-200 p-5 rounded-md shadow-md">
-                  <p className="text-lg font-semibold">
+                  <p className="text-2xl font-bold">
+                    {changelogItem.tag_name}
+                  </p>
+                  <p className="font-semibold">
+                    {changelogItem.name}
+                  </p>
+                  <p className="text-sm text-gray-700 mb-5">
                     {moment(changelogItem.created_at).format('dddd, DD MMMM YYYY')}
                   </p>
-                  <div className="mb-5">
-                    <span className={badgeClass('')}>
-                      {changelogItem.tag_name}
-                    </span>
-                  </div>
-                  <div className="">
+                  <div>
                     {
-                      changelogItem.body ?
-                        (
+                      !changelogItem.body
+                        || (
                             <ReactMarkdown>
                               {changelogItem.body}
                             </ReactMarkdown>
-                        ) :
-                        (
-                          <>
-                            ...
-                          </>
                         )
                     }
                   </div>
