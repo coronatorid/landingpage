@@ -7,13 +7,11 @@ import '../styles/tailwind.scss';
 function MyApp({ Component, pageProps }) {
   return (
     <RootContextProvider>
-      <div>
-        <Header />
-        <div>
-          <Component {...pageProps} />
-        </div>
-        <Footer />
+      <Header />
+      <div className="min-h-full">
+        <Component {...pageProps} />
       </div>
+      <Footer />
     </RootContextProvider>
   )
 }

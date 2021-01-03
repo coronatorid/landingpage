@@ -1,0 +1,18 @@
+[
+  {
+    "name": "coronator",
+    "url": "https://api.github.com/repos/coronatorid/coronator"
+  },
+  {
+    "name": "landingpage",
+    "url": "https://api.github.com/repos/coronatorid/landingpage"
+  },
+  {
+    "name": "core-onator",
+    "url": "https://api.github.com/repos/coronatorid/core-onator"
+  },
+  {
+    "name": "contooling",
+    "url": "https://api.github.com/repos/coronatorid/contooling"
+  }
+]
