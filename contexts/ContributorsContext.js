@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState, createContext, useEffect } from 'react';
+import repos from '../public/data/repos.json';
 
 const storageKey = 'contributors';
 
@@ -7,25 +8,6 @@ const Context = createContext();
 
 const Provider = (props) => {
   const [contributors, setContributors] = useState([]);
-
-  const repos = [
-    {
-      name: 'coronator',
-      url: 'https://api.github.com/repos/coronatorid/coronator/contributors',
-    },
-    {
-      name: 'landingpage',
-      url: 'https://api.github.com/repos/coronatorid/landingpage/contributors',
-    },
-    {
-      name: 'core-onator',
-      url: 'https://api.github.com/repos/coronatorid/core-onator/contributors',
-    },
-    {
-      name: 'contooling',
-      url: 'https://api.github.com/repos/coronatorid/contooling/contributors',
-    },
-  ];
 
   /**
    * @returns {void}
@@ -81,7 +63,7 @@ const Provider = (props) => {
    */
   async function fetchContributorsFromRepo(repo) {
     try {
-      const response = await axios.get(repo.url);
+      const response = await axios.get(`${repo.url}/contributors`);
       return response.data;
 
     } catch (error) {

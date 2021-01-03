@@ -5,6 +5,14 @@
 
 // Base
 @layer base {
+  html, body {
+    @apply h-full;
+  }
+
+  #__next {
+    height: 100%;
+  }
+
   * {
     @apply text-gray-900;
   }
@@ -29,7 +37,7 @@
 }
 
 
-// Components 
+// Components
 @layer components {
   .section {
     @apply py-4 md:py-5 lg:py-8;

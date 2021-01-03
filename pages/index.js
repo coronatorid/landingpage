@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from 'react';
 import Head from 'next/head'
 import Contributors from '../components/Contributors';
+import ShowcaseAppSlider from '../components/ShowcaseAppSlider';
 
 const Index = (props) => {
   const [services, _] = useState([
@@ -90,7 +91,19 @@ const Index = (props) => {
         </div>
       </section>
       <section className="section">
-        <Contributors />
+        <div className="container">
+          <ShowcaseAppSlider />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <Contributors />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container text-center">
+          <a href="/changelog">See Changelog</a>
+        </div>
       </section>
     </>
   )

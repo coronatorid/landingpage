@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 
 const Contributor = (props) => {
@@ -26,6 +27,13 @@ const Contributor = (props) => {
       </div>
     </div>
   )
+}
+
+Contributor.propTypes = {
+  contributor: PropTypes.shape({
+    login: PropTypes.string,
+    avatar_url: PropTypes.string,
+  })
 }
 
 export default Contributor;
