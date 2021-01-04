@@ -1,7 +1,9 @@
 import ContributorsContext from './ContributorsContext';
+import ThemeContext from './ThemeContext';
 
 const providers = [
   ContributorsContext.Provider,
+  ThemeContext.Provider,
 ];
 
 const combineProviders = (components) => {
