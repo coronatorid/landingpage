@@ -46,11 +46,11 @@ const Index = (props) => {
                 Beta v0.0.1
               </span>
             </div>
-            {/* <div className="text-center">
-              <a href="/" className="inline-block h-16">
-                <img src="/images/google-play-badge.png" alt="download google play" className="h-full w-auto"/>
+            <div className="text-center">
+              <a href="#" className="inline-block h-16">
+                <img src="/images/google-play-badge-comingsoon.png" alt="download google play" className="h-full w-auto"/>
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
