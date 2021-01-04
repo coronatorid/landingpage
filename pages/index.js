@@ -38,13 +38,13 @@ const Index = (props) => {
             <p className="text-center max-w-screen-md mb-5">
               Satu langkah maju untuk menuju aplikasi <b>"perfect contact tracing"</b>.
             </p>
-            <p className="text-center max-w-screen-md mb-5">
-              Ikuti perjuangan dan update terbaru kami <a href="https://kitabisa.com/campaign/coronator" className="underline text-blue-400">disini</a>.
-            </p>
             <div className="text-center mb-5">
-              <span className="rounded-lg bg-lotus px-3 py-2 text-gray-100 font-semiboldd text-3xl tracking-widest font-title font-bold mx-auto inline-block">
-                Beta v0.0.1
+              <span className="rounded-lg bg-lotus px-3 py-1 text-gray-100 font-semiboldd text-2xl tracking-widest font-title font-bold mx-auto inline-block">
+                Version 0.0.2
               </span>
+            </div>
+            <div className="container text-center">
+              <a href="/changelog">See Changelog</a>
             </div>
             {/* <div className="text-center">
               <a href="/" className="inline-block h-16">
@@ -103,11 +103,6 @@ const Index = (props) => {
       <section className="section">
         <div className="container">
           <Contributors />
-        </div>
-      </section>
-      <section className="section">
-        <div className="container text-center">
-          <a href="/changelog">See Changelog</a>
         </div>
       </section>
     </>
