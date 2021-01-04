@@ -59,7 +59,7 @@ const Footer = (props) => {
                     <p class="uppercase font-black md:mb-6">Social</p>
                     <ul class="list-reset mb-6">
                         <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                            <a href="https://twitter.com/" class="no-underline hover:underline text-grey-darkest hover:text-teal-dark">Twitter</a>
+                            <a href="https://twitter.com/coronatorid" class="no-underline hover:underline text-grey-darkest hover:text-teal-dark">Twitter</a>
                         </li>
                     </ul>
                 </div>
