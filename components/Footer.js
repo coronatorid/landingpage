@@ -1,7 +1,7 @@
 const yearNow = new Date();
 const Footer = (props) => {
   return (
-    <footer className="pt-5 w-full bg-lightCoral text-gray-200">
+    <footer className="pt-5 w-full bg-lightCoral dark:bg-gray-900 text-gray-200">
         <div className="container mx-auto px-8">
             <div className="w-full flex flex-col md:flex-row py-3">
 
