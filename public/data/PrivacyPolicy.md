@@ -14,4 +14,4 @@ Situs web kami dapat menautkan ke situs eksternal yang tidak dioperasikan oleh k
 <br><br>
 Anda bebas untuk menolak permintaan kami atas informasi pribadi Anda, dengan pemahaman bahwa kami mungkin tidak dapat memberi Anda beberapa layanan yang Anda inginkan.
 <br><br>
-Penggunaan Anda yang berkelanjutan atas situs web kami akan dianggap sebagai penerimaan praktik kami seputar privasi dan informasi pribadi. Jika Anda memiliki pertanyaan tentang bagaimana kami menangani data pengguna dan informasi pribadi, silakan hubungi kami.
+Penggunaan Anda yang berkelanjutan atas situs web dan aplikasi kami akan dianggap sebagai penerimaan praktik kami seputar privasi dan informasi pribadi. Jika Anda memiliki pertanyaan tentang bagaimana kami menangani data pengguna dan informasi pribadi, silakan hubungi kami.
