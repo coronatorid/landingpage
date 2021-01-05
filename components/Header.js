@@ -1,8 +1,28 @@
+import { useEffect, useRef, useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 
 const Header = (props) => {
+  const headerEl = useRef(null);
+
+  function handleScroll() {
+    // handle scroll header
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-    <header className="mx-auto px-2 sm:px-6 lg:px-8 py-2.5 bg-lightCoral dark:bg-gray-900 shadow h-16 flex justify-between">
+    <header
+      ref={headerEl}
+      className={
+        `mx-auto px-2 sm:px-6 lg:px-8 py-2.5 bg-lightCoral dark:bg-gray-900 h-16 flex justify-between fixed w-full z-40 shadow-md`
+      }
+      >
       <a className="flex no-underline hover:no-underline" href="/">
         <div className="inline mx-1 col-start-1 my-auto">
           <img src="/icons/logo.png" alt="Coronator Logo" className="h-6 w-6" />

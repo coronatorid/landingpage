@@ -9,7 +9,7 @@ const Contributor = (props) => {
     <div key={contributor.login} className="relative cursor-pointer" onMouseOver={() => setisNameVisible(true)} onMouseLeave={() => setisNameVisible(false)}>
       <div className={
         `
-          absolute bg-white shadow-lg px-3 py-2 border border-gray-300 rounded-lg
+          absolute bg-white shadow-lg px-3 py-2 border border-gray-300 rounded-lg dark:text-gray-700
           ${isNameVisible || 'hidden'}
         `
       }
