@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <RootContextProvider>
       <Header />
-      <div className="min-h-full">
+      <div className="min-h-full pt-16">
         <Component {...pageProps} />
       </div>
       <Footer />

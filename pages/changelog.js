@@ -93,7 +93,7 @@ const Changelog = (props) => {
           {
             changelogData.map((changelogItem) => {
               return (
-                <div key={changelogItem.id} className="mb-5 border border-gray-200 p-5 rounded-md shadow-md">
+                <div key={changelogItem.id} className="mb-5 border border-gray-200 dark:border-gray-600 dark:bg-gray-900 p-5 rounded-md shadow-md">
                   <p className="text-2xl font-bold">
                     {changelogItem.tag_name}
                   </p>

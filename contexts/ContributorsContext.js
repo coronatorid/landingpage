@@ -2,8 +2,6 @@ import axios from 'axios';
 import { useState, createContext, useEffect } from 'react';
 import repos from '../public/data/repos.json';
 
-const storageKey = 'contributors';
-
 const Context = createContext();
 
 const Provider = (props) => {
