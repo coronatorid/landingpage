@@ -28,12 +28,12 @@ const Header = (props) => {
           <img src="/icons/logo.png" alt="Coronator Logo" className="h-6 w-6" />
         </div>
         <div className="inline mx-1 my-auto col-start-1">
-          <p className="text-white font-medium">CORONATOR</p>
+          <p className="text-gray-100 font-medium">CORONATOR</p>
         </div>
       </a>
       <div className="flex">
         <div className="my-auto mx-3">
-          <a href="https://kitabisa.com/campaign/coronator" className="text-white font-semibold outline-none no-underline hover:no-underline">Support</a>
+          <a href="https://kitabisa.com/campaign/coronator" className="text-gray-100 font-semibold outline-none no-underline hover:no-underline">Support</a>
         </div>
         <div className="flex items-center h-full">
           <ThemeToggle />

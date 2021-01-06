@@ -38,19 +38,22 @@ const Index = (props) => {
             <p className="text-center max-w-screen-md mb-5">
               Satu langkah maju untuk menuju aplikasi <b>"perfect contact tracing"</b>.
             </p>
-            <div className="text-center mb-5">
-              <span className="rounded-lg bg-lotus px-3 py-1 text-gray-100 font-semiboldd text-2xl tracking-widest font-title font-bold mx-auto inline-block">
+            {/* <div className="text-center mb-5">
+              <span className="rounded-lg bg-lotus px-3 py-1 text-gray-100 text-2xl tracking-widest font-title font-semibold mx-auto inline-block">
                 Version 0.0.2
               </span>
-            </div>
             <div className="container text-center">
               <a href="/changelog">See Changelog</a>
             </div>
-            {/* <div className="text-center">
-              <a href="/" className="inline-block h-16">
-                <img src="/images/google-play-badge.png" alt="download google play" className="h-full w-auto"/>
-              </a>
             </div> */}
+            <div className="text-center">
+              <a href="#" className="inline-block h-16">
+                <img src="/images/google-play-badge-comingsoon.png" alt="download google play" className="h-full w-auto"/>
+              </a>
+              <div className="container text-center">
+                <a href="/changelog">See Changelog</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

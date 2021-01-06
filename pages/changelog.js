@@ -3,6 +3,7 @@ import {Fragment, useEffect, useState} from 'react';
 import repos from '../public/data/repos.json';
 import ReactMarkdown from 'react-markdown';
 import moment from 'moment';
+import Head from 'next/head'
 
 const Changelog = (props) => {
   const [repo, setRepo] = useState(null);
@@ -81,6 +82,9 @@ const Changelog = (props) => {
 
   return (
     <Fragment>
+      <Head>
+        <title>Changelog | Coronator - Indonesia Covid Application</title>
+      </Head>
       <section className="section">
         <div className="container max-w-screen-md">
           <h2 className="mb-5">
