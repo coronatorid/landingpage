@@ -32,6 +32,3 @@ Materi yang muncul di situs **Coronator** dapat mencakup kesalahan teknis, tipog
 
 #### 7. Modifikasi
 **Coronator** dapat merevisi persyaratan layanan ini untuk situs webnya kapan saja tanpa pemberitahuan. Dengan menggunakan situs web ini, Anda setuju untuk terikat dengan versi persyaratan layanan saat itu.
-
-#### 8. Peraturan pemerintah
-Syarat dan ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum Indonesia dan Anda tunduk pada yurisdiksi eksklusif pengadilan di Negara atau lokasi tersebut.
