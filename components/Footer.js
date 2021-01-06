@@ -26,7 +26,7 @@ const Footer = (props) => {
                           <input type="email" placeholder="yourmail@example.com"
                               className="flex-1 appearance-none rounded shadow p-3 text-grey-dark mr-2 focus:outline-none"></input>
                           <button type="submit"
-                              className="bg-lotus-600 text-white text-base font-semibold rounded-md shadow-md hover:bg-lotus p-3">Subscribe</button>
+                              className="bg-lotus text-white text-base font-semibold dark:bg-white dark:text-black rounded-md shadow-md hover:bg-lotus p-3">Subscribe</button>
                       </div>
                   </form>
                 </div>
