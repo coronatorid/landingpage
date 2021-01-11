@@ -33,9 +33,6 @@ const Header = (props) => {
       </a>
       <div className="flex">
         <div className="my-auto mx-3">
-          <a href="https://github.com/coronatorid/coronator/releases" className="text-gray-100 font-semibold outline-none no-underline hover:no-underline">Download Versi Beta</a>
-        </div>
-        <div className="my-auto mx-3">
           <a href="https://kitabisa.com/campaign/coronator" className="text-gray-100 font-semibold outline-none no-underline hover:no-underline">Support</a>
         </div>
         <div className="flex items-center h-full">
