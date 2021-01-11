@@ -4,9 +4,8 @@ const Footer = (props) => {
         <footer className="pt-5 w-full bg-lightCoral dark:bg-gray-900 text-gray-200">
             <div className="container mx-auto px-8">
                 <div className="w-full flex flex-col md:flex-row py-3">
-
                     <div className="flex-1 mb-6 pr-5">
-                        <a className="no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-gradient gradient" href="#">
+                        <div className="no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-gradient gradient">
                             <a className="flex no-underline hover:no-underline" href="/">
                                 <div className="inline mx-1 col-start-1 my-auto">
                                     <img src="/icons/logo.png" alt="Coronator Logo" className="h-6 w-6" />
@@ -15,7 +14,7 @@ const Footer = (props) => {
                                     <p className="text-gray-100 font-medium">Coronator</p>
                                 </div>
                             </a>
-                        </a>
+                        </div>
                         <img width="200" src="https://xwing.app/img/android.png"></img>
                     </div>
 
@@ -63,7 +62,6 @@ const Footer = (props) => {
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
 
