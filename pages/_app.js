@@ -1,29 +1,32 @@
 import RootContextProvider from '../contexts/RootContextProvider';
-import CrewLayout from '../layouts/CrewLayout';
 import Layout from '../layouts/index';
+import App from 'next/app';
 
 import '../styles/font.css';
 import '../styles/tailwind.scss';
 
 function MyApp({ Component, pageProps, router }) {
-  const routerPathName = router.pathname;
-
   let layoutName = '';
 
-  // get layout name from url prefix
-  if(routerPathName.startsWith('/crew/')) {
+  if(router.pathname.startsWith('/crew/')) {
     layoutName = 'crew';
   };
 
-  // get layout name from page component
-  layoutName = Component.layout || '';
+  if(router.pathname.startsWith('/auth/')) {
+    layoutName = 'auth';
+  }
+
+  // get layout name from page componenPt if exists
+  if(Component.layout) {
+    layoutName = Component.layout;
+  }
 
   return (
     <RootContextProvider>
       <Layout name={layoutName}>
         <Component {...pageProps} />
       </Layout>
-    </RootContextProvider>
+  </RootContextProvider>
   )
 }
 

@@ -1,5 +1,6 @@
 import { useState, useContext, useEffect } from 'react';
 import Head from 'next/head'
+import Link from 'next/link';
 import Contributors from '../components/Contributors';
 import ShowcaseAppSlider from '../components/ShowcaseAppSlider';
 
@@ -40,11 +41,13 @@ const Index = (props) => {
             </p>
             <div className="text-center">
               <a href="#" className="inline-block h-16">
-                <img src="/images/google-play-badge-comingsoon.png" alt="download google play" className="h-full w-auto" />
+                <img src="/images/google-play-badge.png" alt="download google play" className="h-full w-auto" />
               </a>
             </div>
             <div className="container text-center underline">
-              <a href="/changelog">See Changelog</a>
+              <Link href="/changelog">
+                <a>See Changelog</a>
+              </Link>
             </div>
           </div>
         </div>

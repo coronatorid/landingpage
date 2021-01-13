@@ -1,9 +1,13 @@
 import ContributorsContext from './ContributorsContext';
+import IntendedRouteContext from './IntendedRouteContext';
 import ThemeContext from './ThemeContext';
+import UserContext from './UserContext';
 
 const providers = [
   ContributorsContext.Provider,
   ThemeContext.Provider,
+  UserContext.Provider,
+  IntendedRouteContext.Provider,
 ];
 
 const combineProviders = (components) => {
