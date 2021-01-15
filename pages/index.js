@@ -1,8 +1,8 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react'
 import Head from 'next/head'
-import Link from 'next/link';
-import Contributors from '../components/Contributors';
-import ShowcaseAppSlider from '../components/ShowcaseAppSlider';
+import Link from 'next/link'
+import Contributors from '../components/Contributors'
+import ShowcaseAppSlider from '../components/ShowcaseAppSlider'
 
 const Index = (props) => {
   const [services, _] = useState([
@@ -18,7 +18,7 @@ const Index = (props) => {
       title: 'Secure',
       desc: 'Kami menggunakan best practice keamanan seperti oauth, OTP dan hashing untuk data-data penting yang masuk kedalam basis data coronator.'
     },
-  ]);
+  ])
 
   return (
     <>
@@ -88,7 +88,7 @@ const Index = (props) => {
             width="560"
             height="315"
             src="https://www.youtube.com/embed/jibQJOR1zB4"
-            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            frameBorder="0" allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture"
             allowFullScreen={true}>
           </iframe>
         </div>
@@ -107,4 +107,4 @@ const Index = (props) => {
   )
 }
 
-export default Index;
+export default Index

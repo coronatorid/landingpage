@@ -1,5 +1,5 @@
 import { Fragment, useContext } from "react"
-import UserContext from "../../../contexts/UserContext";
+import UserContext from "../../../contexts/UserContext"
 
 const Profile = (props) => {
   return (
@@ -14,4 +14,4 @@ const Profile = (props) => {
   )
 }
 
-export default Profile;
+export default Profile

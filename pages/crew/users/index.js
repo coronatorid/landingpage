@@ -1,8 +1,8 @@
 import { Fragment } from "react"
-import useAccessToken from '../../../hooks/useAccessToken';
+import useAccessToken from '../../../hooks/useAccessToken'
 
 const Users = () => {
-  const accessToken = useAccessToken();
+  const accessToken = useAccessToken()
 
   return (
     <Fragment>
@@ -13,4 +13,4 @@ const Users = () => {
   )
 }
 
-export default Users;
+export default Users

@@ -1,24 +1,24 @@
-import RootContextProvider from '../contexts/RootContextProvider';
-import Layout from '../layouts/index';
-import App from 'next/app';
+import RootContextProvider from '../contexts/RootContextProvider'
+import Layout from '../layouts/index'
+import App from 'next/app'
 
-import '../styles/font.css';
-import '../styles/tailwind.scss';
+import '../styles/font.css'
+import '../styles/tailwind.scss'
 
 function MyApp({ Component, pageProps, router }) {
-  let layoutName = '';
+  let layoutName = ''
 
   if(router.pathname.startsWith('/crew/')) {
-    layoutName = 'crew';
-  };
+    layoutName = 'crew'
+  }
 
   if(router.pathname.startsWith('/auth/')) {
-    layoutName = 'auth';
+    layoutName = 'auth'
   }
 
   // get layout name from page componenPt if exists
   if(Component.layout) {
-    layoutName = Component.layout;
+    layoutName = Component.layout
   }
 
   return (
@@ -26,8 +26,8 @@ function MyApp({ Component, pageProps, router }) {
       <Layout name={layoutName}>
         <Component {...pageProps} />
       </Layout>
-  </RootContextProvider>
+    </RootContextProvider>
   )
 }
 
-export default MyApp;
+export default MyApp

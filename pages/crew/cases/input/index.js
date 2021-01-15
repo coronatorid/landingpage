@@ -1,8 +1,8 @@
 import { Fragment } from "react"
-import useAccessToken from "../../../../hooks/useAccessToken";
+import useAccessToken from "../../../../hooks/useAccessToken"
 
 const CasesInput = (props) => {
-  const accessToken = useAccessToken();
+  const accessToken = useAccessToken()
 
   return (
     <Fragment>
@@ -12,4 +12,4 @@ const CasesInput = (props) => {
 }
 
 
-export default CasesInput;
+export default CasesInput

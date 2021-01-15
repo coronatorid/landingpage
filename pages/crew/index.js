@@ -1,9 +1,9 @@
-import { useContext, useEffect } from "react";
-import userApi from '../../services/api/userApi';
-import useAccessToken from "../../hooks/useAccessToken";
+import { useContext, useEffect } from "react"
+import userApi from '../../services/api/userApi'
+import useAccessToken from "../../hooks/useAccessToken"
 
 const CrewIndex = (props) => {
-  const accessToken = useAccessToken();
+  const accessToken = useAccessToken()
 
   return (
     <>
@@ -12,6 +12,6 @@ const CrewIndex = (props) => {
   )
 }
 
-CrewIndex.layout = 'crew';
+CrewIndex.layout = 'crew'
 
-export default CrewIndex;
+export default CrewIndex

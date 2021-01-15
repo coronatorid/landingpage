@@ -19,7 +19,7 @@ const Page = (props) => {
 
   useEffect(() => {
 
-  }, []);
+  }, [])
 
   return (
     <Fragment>
@@ -51,4 +51,4 @@ const Page = (props) => {
 }
 
 
-export default Page;
+export default Page
