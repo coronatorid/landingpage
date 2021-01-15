@@ -3,7 +3,7 @@ import userApi from '../../services/api/userApi';
 import useAccessToken from "../../hooks/useAccessToken";
 
 const CrewIndex = (props) => {
-  const accessToken = useAccessToken({to: '/auth/login'})
+  const accessToken = useAccessToken();
 
   return (
     <>

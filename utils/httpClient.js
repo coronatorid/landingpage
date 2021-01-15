@@ -4,7 +4,7 @@ import router from 'next/router';
 
 const instance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL,
-  timeout: 3000,
+  timeout: 2000,
   headers: {}
 });
 

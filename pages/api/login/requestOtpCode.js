@@ -1,25 +1,44 @@
 import axios from 'axios';
 
+const http = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  timeout: 2000,
+  headers: {
+    'content-type': 'application/json'
+  }
+});
+
 async function handleRequest(req, res) {
   try {
+    const {
+      phone
+    } = req.body;
+
     const API_CLIENT_ID = process.env.API_CLIENT_ID;
     const API_CLIENT_SECRET = process.env.API_CLIENT_SECRET;
-    const url = 'https://jsonplaceholder.typicode.com/posts/1';
+    const URL = process.env.NEXT_PUBLIC_API_URL;
 
-    // mocking dulu
-    const response = await axios.get(url);
-    const {data} = response;
+    const response = await http.post(`${URL}/administration/otp-requests`, {
+      client_uid: API_CLIENT_ID,
+      API_CLIENT_SECRET: API_CLIENT_SECRET,
+      phone_number: phone
+    });
+
+    const {
+      otp_sent_time
+    } = response.data;
 
     res.statusCode = 200;
     return res.json({
       message: 'otp send to your phone',
-      postData: req.body,
-      otherData: data,
+      data: {
+        sent_time: otp_sent_time
+      }
     });
   } catch (error) {
     console.log(error);
-    res.statusCode = 500;
-    return res;
+    res.statusCode = error.response.status;
+    return res.json({error});
   }
 }
 

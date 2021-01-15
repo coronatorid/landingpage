@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-  
+
   ![Publish Docker image](https://github.com/coronatorid/landingpage/workflows/Publish%20Docker%20image/badge.svg)
-  
+
 </p>
 
 # Landing Page for Coronator

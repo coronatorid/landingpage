@@ -1,25 +1,44 @@
 import axios from 'axios';
 
+const http = axios.create({
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  timeout: 2000,
+  headers: {
+    'content-type': 'application/json'
+  }
+});
+
 async function handleRequest(req, res) {
   try {
+    const {
+      phone,
+      sent_time,
+      otp_code
+    } = req.body;
+
     const API_CLIENT_ID = process.env.API_CLIENT_ID;
     const API_CLIENT_SECRET = process.env.API_CLIENT_SECRET;
-    const url = 'https://jsonplaceholder.typicode.com/posts/1';
+    const URL = process.env.NEXT_PUBLIC_API_URL;
 
-    // mocking dulu
-    const response = await axios.get(url);
-    const {data} = response;
+    const response = await http.post(`${URL}/administration/login`, {
+      client_uid: API_CLIENT_ID,
+      client_secret: API_CLIENT_SECRET,
+      phone_number: phone,
+      otp_sent_time: sent_time,
+      otp_code: otp_code
+    });
 
     res.statusCode = 200;
     return res.json({
-      token: 'thisisyourtokenaslkdjkrltiu423ony578o3s2804fy5b34587y2345',
-      postData: req.body,
-      otherData: data,
+      message: 'success',
+      data: {
+        token: ''
+      }
     });
   } catch (error) {
     console.log(error);
-    res.statusCode = 500;
-    return res;
+    res.statusCode = error.response.status;
+    return res.json({error});
   }
 }
 

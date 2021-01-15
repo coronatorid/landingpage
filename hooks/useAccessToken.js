@@ -2,18 +2,16 @@ import {useEffect, useState} from 'react';
 import Cookies from 'js-cookie';
 import router from 'next/router';
 
-function useAccessToken(redirect = {to: '/auth/login'}) {
+function useAccessToken(redirectIfNotFoundTo = '/auth/login') {
   const accessToken = Cookies.get('accessToken');
 
   useEffect(() => {
-    if(!redirect.to) return;
+    if(!redirectIfNotFoundTo) return;
 
-    console.log('changed');
-
-    if(redirect.to && !accessToken) {
-      router.push(redirect.to);
+    if(redirectIfNotFoundTo && !accessToken) {
+      router.push(redirectIfNotFoundTo);
     }
-  }, [redirect.to, accessToken]);
+  }, [redirectIfNotFoundTo, accessToken]);
 
   return accessToken || null;
 }

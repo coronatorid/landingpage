@@ -2190,6 +2190,19 @@ gray-matter@^4.0.2:
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
 
+gridjs-react@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/gridjs-react/-/gridjs-react-3.2.1.tgz#78b24125c1e27cc91a7d36ed9ff10d6d7eac7ee6"
+  integrity sha512-3HkZaHOlicS9ZjlAypZ7sLjT1pnGAd+w2v7KUhjEHEL2t7MVV0xtlGPKnorLsfmtrWRB/CXm84UwPfxdJ1gBdQ==
+
+gridjs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/gridjs/-/gridjs-3.2.1.tgz#0b3d240bc6d7f546c71238e6c0c3d2e0af289df8"
+  integrity sha512-2g2doNGj1/6PUUbT2uAyJ8myDUX/BnQDpLBUC5WWXxpZjYGxK9tg4mm+Yp34/WiUCIjQHWq6TEVKjmY8GKWDlA==
+  dependencies:
+    preact "^10.5.7"
+    tslib "^2.0.1"
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -3784,6 +3797,11 @@ postcss@^8.1.6, postcss@^8.2.1:
     nanoid "^3.1.20"
     source-map "^0.6.1"
 
+preact@^10.5.7:
+  version "10.5.9"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.5.9.tgz#8caba9288b4db1d593be2317467f8735e43cda0b"
+  integrity sha512-X4m+4VMVINl/JFQKALOCwa3p8vhMAhBvle0hJ/W44w/WWfNb2TA7RNicDV3K2dNVs57f61GviEnVLiwN+fxiIg==
+
 prebuild-install@^5.3.5:
   version "5.3.6"
   resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.3.6.tgz#7c225568d864c71d89d07f8796042733a3f54291"
@@ -4965,6 +4983,11 @@ tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
+
+tslib@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
+  integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
 tty-browserify@0.0.0:
   version "0.0.0"
