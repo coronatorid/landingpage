@@ -1,7 +1,7 @@
 import { Fragment, useContext } from "react"
 import UserContext from "../../../contexts/UserContext"
 
-const Profile = (props) => {
+const Page = (props) => {
   return (
     <Fragment>
       <div>
@@ -14,4 +14,4 @@ const Profile = (props) => {
   )
 }
 
-export default Profile
+export default Page

@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Contributors from '../components/Contributors'
 import ShowcaseAppSlider from '../components/ShowcaseAppSlider'
 
-const Index = (props) => {
+const Page = (props) => {
   const [services, _] = useState([
     {
       title: 'Location Tracking',
@@ -107,4 +107,4 @@ const Index = (props) => {
   )
 }
 
-export default Index
+export default Page

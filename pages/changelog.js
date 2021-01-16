@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown'
 import moment from 'moment'
 import Head from 'next/head'
 
-const Changelog = (props) => {
+const Page = (props) => {
   const [repo, setRepo] = useState(null)
   const [changelogData, setChangelogData] = useState([])
 
@@ -123,4 +123,4 @@ const Changelog = (props) => {
   )
 }
 
-export default Changelog
+export default Page

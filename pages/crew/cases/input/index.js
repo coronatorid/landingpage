@@ -1,15 +1,22 @@
 import { Fragment } from "react"
 import useAccessToken from "../../../../hooks/useAccessToken"
 
-const CasesInput = (props) => {
+const Page = (props) => {
   const accessToken = useAccessToken()
 
   return (
     <Fragment>
-      Input case goes here
+      <h3>
+        Cases - Input
+      </h3>
+      <section className="section">
+        <div>
+
+        </div>
+      </section>
     </Fragment>
   )
 }
 
 
-export default CasesInput
+export default Page

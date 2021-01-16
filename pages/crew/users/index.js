@@ -1,16 +1,16 @@
 import { Fragment } from "react"
 import useAccessToken from '../../../hooks/useAccessToken'
 
-const Users = () => {
+const Page = () => {
   const accessToken = useAccessToken()
 
   return (
     <Fragment>
       <div>
-        Users
+        Users page
       </div>
     </Fragment>
   )
 }
 
-export default Users
+export default Page

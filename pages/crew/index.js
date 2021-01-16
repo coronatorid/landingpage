@@ -1,8 +1,9 @@
 import { useContext, useEffect } from "react"
 import userApi from '../../services/api/userApi'
 import useAccessToken from "../../hooks/useAccessToken"
+import Link from 'next/link'
 
-const CrewIndex = (props) => {
+const Page = (props) => {
   const accessToken = useAccessToken()
 
   return (
@@ -12,6 +13,6 @@ const CrewIndex = (props) => {
   )
 }
 
-CrewIndex.layout = 'crew'
+Page.layout = 'crew'
 
-export default CrewIndex
+export default Page

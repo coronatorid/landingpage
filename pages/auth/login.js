@@ -5,7 +5,7 @@ import authApi from '../../services/api/authApi'
 import Cookies from 'js-cookie'
 import IntendedRouteContext from '../../contexts/IntendedRouteContext'
 
-const Login = () => {
+const Page = () => {
   const router = useRouter()
   const {url, setUrl} = useContext(IntendedRouteContext.Context)
   const [isSubmit, setIsSubmit] = useState(false)
@@ -47,7 +47,7 @@ const Login = () => {
       } = formData
 
       const response = await authApi.requestOtpCode({
-        phone
+        phone: `+62${phone}`
       })
 
       const {
@@ -58,8 +58,6 @@ const Login = () => {
         ...formData,
         sent_time
       })
-
-      console.log('response Request OTP', response.data)
 
       setIsOtpSent(true)
       setCountdown(30)
@@ -87,17 +85,17 @@ const Login = () => {
       } = formData
 
       const response = await authApi.verifyOtpCode({
-        phone,
+        phone: `+62${phone}`,
         sent_time,
         otp_code
       })
 
-      console.log('response Verify OTP', response.data)
-
       Cookies.set('accessToken', response.data.token)
+
       const _url = url
       setUrl(null)
       router.push(_url || '/')
+
     } catch (error) {
       console.log(error)
       if(error.response.status == 422) {
@@ -117,15 +115,20 @@ const Login = () => {
             <form onSubmit={requestOtp}>
               <div className="mb-3">
                 <label htmlFor="" className="block mb-2">Phone Number</label>
-                <input
-                  type="text"
-                  className="block w-full rounded-md"
-                  placeholder="Phone Number"
-                  autoComplete="off"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChangeFormData}
-                />
+                <div className="flex">
+                  <span className="flex justify-center items-center w-16 border-gray-600 border rounded-md border-r-0 rounded-r-none bg-gray-100">
+                    +62
+                  </span>
+                  <input
+                    type="text"
+                    className="block w-full rounded-md border-l-0 rounded-l-none outline-none ring-0"
+                    placeholder="81231231231"
+                    autoComplete="off"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChangeFormData}
+                  />
+                </div>
                 {
                   errors.phone &&
                     <TextError>
@@ -175,4 +178,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Page

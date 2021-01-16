@@ -66,8 +66,19 @@ const CrewLayout = (props) => {
     setShowMenu(false);
   }
 
+  function handleRouteChange() {
+    console.log('handle route change');
+  }
+
   useEffect(() => {
     menuRef.current.addEventListener('click', menuClickHandler);
+
+
+    router.events.on('routeChangeStart', handleRouteChange)
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange)
+    }
   }, []);
 
   function handleLogout() {

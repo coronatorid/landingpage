@@ -12,7 +12,7 @@ import gfm from 'remark-gfm'
 //   )
 // }
 
-const Blog = ({ content, data }) => {
+const Page = ({ content, data }) => {
   const frontmatter = data
 
   return (
@@ -36,9 +36,9 @@ const Blog = ({ content, data }) => {
   )
 }
 
-export default Blog
+export default Page
 
-Blog.getInitialProps = async (context) => {
+Page.getInitialProps = async (context) => {
   const { blog } = context.query
   const content = await import('../public/data/ToS.md')
   const data = matter(content.default)
