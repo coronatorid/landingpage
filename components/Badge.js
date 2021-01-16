@@ -29,8 +29,8 @@ const Badge = ({type, children}) => {
   ];
 
   function selectedType() {
-    const _type = allowedTypes.find((item) => {
-      return item.name == type
+    const _type = allowedTypes.find((allowedType) => {
+      return allowedType.name == type
     })
 
     return _type ? _type : allowedTypes[0]

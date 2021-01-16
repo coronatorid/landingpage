@@ -6,6 +6,8 @@ import "gridjs/dist/theme/mermaid.css"
 import Modal from '../../../../components/Modal'
 import { route } from "next/dist/next-server/server/router"
 import BadgeReportStatus from '../../../../components/BadgeReportStatus'
+import ReportedCaseDetail from '../../../../components/ReportedCaseDetail'
+import EmptyData from "../../../../components/EmptyData"
 
 const Page = (props) => {
   const router = useRouter();
@@ -13,14 +15,31 @@ const Page = (props) => {
   const [data, setData] = useState(
     [
       {
-        id: '1',
-        created_at: '123123',
-        status: 'valid',
+        "id": 1,
+        "user_id": 1,
+        "status": 2,
+        "image_path": "http://192.168.0.7:1304/storage/1/666df487-61a1-456a-9cea-466a113ea429.jpeg?signature=AURELIA_7c6ebfc5617110b0810bd21fed6ca7bfa5ab33c8.b2f786925af34d85baedf1727c84ec0b286711a8.UC_25657ae4a8549a0ed58591c04ce359840c4c9474b926abc18ce2d9244c054647&expires_at=1610725746",
+        "image_deleted": false,
+        "created_at": "2021-01-15T15:48:02Z",
+        "updated_at": "2021-01-15T15:48:02Z"
       },
       {
-        id: '2',
-        created_at: '12323',
-        status: 'pending'
+        "id": 2,
+        "user_id": 1,
+        "status": 2,
+        "image_path": "http://192.168.0.7:1304/storage/1/666df487-61a1-456a-9cea-466a113ea429.jpeg?signature=AURELIA_7c6ebfc5617110b0810bd21fed6ca7bfa5ab33c8.b2f786925af34d85baedf1727c84ec0b286711a8.UC_25657ae4a8549a0ed58591c04ce359840c4c9474b926abc18ce2d9244c054647&expires_at=1610725746",
+        "image_deleted": false,
+        "created_at": "2021-01-15T15:48:02Z",
+        "updated_at": "2021-01-15T15:48:02Z"
+      },
+      {
+        "id": 3,
+        "user_id": 1,
+        "status": 2,
+        "image_path": "http://192.168.0.7:1304/storage/1/666df487-61a1-456a-9cea-466a113ea429.jpeg?signature=AURELIA_7c6ebfc5617110b0810bd21fed6ca7bfa5ab33c8.b2f786925af34d85baedf1727c84ec0b286711a8.UC_25657ae4a8549a0ed58591c04ce359840c4c9474b926abc18ce2d9244c054647&expires_at=1610725746",
+        "image_deleted": false,
+        "created_at": "2021-01-15T15:48:02Z",
+        "updated_at": "2021-01-15T15:48:02Z"
       }
     ]
   )
@@ -105,24 +124,7 @@ const Page = (props) => {
             show={showModal}
             onHide={() => setShowModal(false)}
             header="Case Detail"
-            body={
-              activeData
-                ? (
-                  <div>
-                    <div>
-                      {activeData.id}
-                    </div>
-                    <div>
-                      {activeData.status}
-                    </div>
-                    <div>
-                    </div>
-                  </div>
-                )
-                : (
-                  <p>No Data</p>
-                )
-            }
+            body={activeData ? <ReportedCaseDetail data={activeData} /> : <EmptyData />}
           />
         </div>
       </section>

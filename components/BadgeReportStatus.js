@@ -7,22 +7,25 @@ const BadgeReportStatus = ({status}) => {
 
   const allowedStatuses = [
     {
-      name: 'pending',
+      id: '1',
+      name: 'Unnamed Status',
       type: 'warning',
     },
     {
-      name: 'valid',
+      id: '2',
+      name: 'Unnamed Status',
       type: 'danger',
     },
     {
-      name: 'rejected',
+      id: '3',
+      name: 'Unnamed Status',
       type: 'default',
     },
   ]
 
   function selectedStatus() {
-    const _status = allowedStatuses.find((item) => {
-      return String(item.name).toLowerCase() == String(status).toLowerCase()
+    const _status = allowedStatuses.find((allowedStatus) => {
+      return allowedStatus.id == status
     })
 
     return _status ? _status : allowedStatuses[0]
@@ -30,7 +33,7 @@ const BadgeReportStatus = ({status}) => {
 
   return (
     <Badge type={selectedStatus().type}>
-      {status}
+      {selectedStatus().name}
     </Badge>
   )
 }
