@@ -1,11 +1,11 @@
-import React, { Fragment, useContext, useEffect, useState, useRef } from 'react';
-import UserContext from '../contexts/UserContext';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import Cookies from 'js-cookie';
-import IntendedRouteContext from '../contexts/IntendedRouteContext';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faBars, faUser} from '@fortawesome/free-solid-svg-icons';
+import React, { Fragment, useContext, useEffect, useState, useRef } from 'react'
+import UserContext from '../contexts/UserContext'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import Cookies from 'js-cookie'
+import IntendedRouteContext from '../contexts/IntendedRouteContext'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faBars, faUser} from '@fortawesome/free-solid-svg-icons'
 
 const menus = [
   {

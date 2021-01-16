@@ -8,6 +8,7 @@ import { route } from "next/dist/next-server/server/router"
 import BadgeReportStatus from '../../../../components/BadgeReportStatus'
 import ReportedCaseDetail from '../../../../components/ReportedCaseDetail'
 import EmptyData from "../../../../components/EmptyData"
+import moment from 'moment'
 
 const Page = (props) => {
   const router = useRouter();
@@ -35,7 +36,7 @@ const Page = (props) => {
       {
         "id": 3,
         "user_id": 1,
-        "status": 2,
+        "status": 0,
         "image_path": "http://192.168.0.7:1304/storage/1/666df487-61a1-456a-9cea-466a113ea429.jpeg?signature=AURELIA_7c6ebfc5617110b0810bd21fed6ca7bfa5ab33c8.b2f786925af34d85baedf1727c84ec0b286711a8.UC_25657ae4a8549a0ed58591c04ce359840c4c9474b926abc18ce2d9244c054647&expires_at=1610725746",
         "image_deleted": false,
         "created_at": "2021-01-15T15:48:02Z",
@@ -90,17 +91,24 @@ const Page = (props) => {
         <div className="mb-3">
           <Grid
             data={data}
+            width="100%"
             columns={[
               {
                 name: 'id',
                 hidden: true,
+                width: 0,
               },
-              'created_at',
+              {
+                name: 'Created At',
+                data: (row) => {
+                  return moment(row.created_at).format('YYYY MMMM DD - HH:mm:ss')
+                },
+              },
               {
                 name: 'status',
                 formatter: (cell, row) => {
                   return _(<BadgeReportStatus status={row.cells[2].data} />)
-                }
+                },
               },
               {
                 name: 'Action',
@@ -108,8 +116,8 @@ const Page = (props) => {
                   return _(
                     <span
                       onClick={() => showDetailData(row.cells[0].data)}
-                      className="inline-block bg-blue-500 rounded-md text-gray-100 px-3 py-2"
-                    >Show Data</span>
+                      className="inline-block rounded-md text-xs text-gray-100 px-3 py-2 cursor-pointer bg-blue-500 hover:bg-blue-700"
+                    >Show</span>
                   )
                 }
               }

@@ -4,19 +4,19 @@ import PropTypes from 'prop-types'
 const BadgeReportStatus = ({status}) => {
   const allowedStatuses = [
     {
-      id: '1',
-      name: 'Unnamed Status',
+      id: 0,
+      name: 'Confirmed',
+      type: 'danger'
+    },
+    {
+      id: 1,
+      name: 'Rejected',
+      type: 'secondary',
+    },
+    {
+      id: 2,
+      name: 'Pending',
       type: 'warning',
-    },
-    {
-      id: '2',
-      name: 'Unnamed Status',
-      type: 'danger',
-    },
-    {
-      id: '3',
-      name: 'Unnamed Status',
-      type: 'default',
     },
   ]
 
@@ -35,9 +35,11 @@ const BadgeReportStatus = ({status}) => {
   )
 }
 
-
 BadgeReportStatus.propTypes = {
-  status: PropTypes.string,
+  status: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
 }
 
 BadgeReportStatus.defaultProps = {

@@ -37,7 +37,7 @@ const Badge = ({type, children}) => {
   }
 
   return (
-    <span className={`inline-block px-3 py-2 text-sm  rounded-full ${selectedType().classes}`}>
+    <span className={`inline-block px-3 py-2 text-xs rounded-full shadow-sm ${selectedType().classes}`}>
       {children}
     </span>
   )
