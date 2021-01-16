@@ -2,9 +2,6 @@ import Badge from './Badge'
 import PropTypes from 'prop-types'
 
 const BadgeReportStatus = ({status}) => {
-
-  console.log(status);
-
   const allowedStatuses = [
     {
       id: '1',

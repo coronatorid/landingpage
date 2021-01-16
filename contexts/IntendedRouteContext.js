@@ -17,7 +17,6 @@ const Provider = (props) => {
 
   useEffect(() => {
     if(initialized) {
-      console.log('url changed', url);
       setUrl(url);
       Cookies.set('intendedUrl', url);
     }

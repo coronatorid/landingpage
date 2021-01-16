@@ -67,7 +67,7 @@ const CrewLayout = (props) => {
   }
 
   function handleRouteChange() {
-    console.log('handle route change');
+
   }
 
   useEffect(() => {

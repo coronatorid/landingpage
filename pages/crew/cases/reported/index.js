@@ -58,7 +58,6 @@ const Page = (props) => {
       }
     });
 
-    console.log('page changed to: ', page);
   }, [page]);
 
   async function fetchData() {
