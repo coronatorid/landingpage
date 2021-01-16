@@ -73,19 +73,23 @@ const Page = (props) => {
           <Grid
             data={data}
             columns={[
+              {
+                name: 'id',
+                hidden: true,
+              },
               'created_at',
               {
                 name: 'status',
                 formatter: (cell, row) => {
-                  return _(<BadgeReportStatus status={row.cells[1].data} />)
+                  return _(<BadgeReportStatus status={row.cells[2].data} />)
                 }
               },
               {
-                name: 'id',
-                formatter: (cell) => {
+                name: 'Action',
+                formatter: (cell, row) => {
                   return _(
                     <span
-                      onClick={() => showDetailData(cell)}
+                      onClick={() => showDetailData(row.cells[0].data)}
                       className="inline-block bg-blue-500 rounded-md text-gray-100 px-3 py-2"
                     >Show Data</span>
                   )
