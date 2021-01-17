@@ -1,7 +1,7 @@
 const EmptyData = (props) => {
   return (
     <div>
-      Sorry, No data.. :(
+      Maapkeun, tidak ada data.. :(
     </div>
   )
 }
