@@ -26,6 +26,7 @@ const Page = ({ content, data }) => {
             <ReactMarkdown
                 escapeHtml={false}
                 source={content}
+                className="text-title"
                 renderers={{ code: CodeBlock }}
             />
         </div>
