@@ -5,7 +5,7 @@ const BadgeReportStatus = ({status}) => {
   const allowedStatuses = [
     {
       id: 0,
-      name: 'Confirmed',
+      name: 'Dikonfirmasi',
       type: 'danger'
     },
     {
