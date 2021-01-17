@@ -10,7 +10,7 @@ const BadgeReportStatus = ({status}) => {
     },
     {
       id: 1,
-      name: 'Rejected',
+      name: 'Ditolak',
       type: 'secondary',
     },
     {
