@@ -91,6 +91,14 @@ const Index = (props) => {
         </div>
       </section>
       <section className="section">
+        <h2 className="text-center">
+          How It Ends
+        </h2>
+        <div className="container min-h-52 flex items-center justify-center">
+          <blockquote className="twitter-tweet"><p lang="en" dir="ltr">Built <a href="https://twitter.com/coronatorid?ref_src=twsrc%5Etfw">@coronatorid</a> was a fun process, I learn much more about flutter and found a ddd pattern that suits into my golang projects in the future.</p>&mdash; Insomnius (@insomnius_) <a href="https://twitter.com/insomnius_/status/1352235894745382917?ref_src=twsrc%5Etfw">January 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </section>
+      <section className="section">
         <div className="container">
           <ShowcaseAppSlider />
         </div>
