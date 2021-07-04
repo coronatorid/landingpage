@@ -1,35 +1,35 @@
-import axios from 'axios';
-import {Fragment, useEffect, useState} from 'react';
-import repos from '../public/data/repos.json';
-import ReactMarkdown from 'react-markdown';
-import moment from 'moment';
+import axios from 'axios'
+import {Fragment, useEffect, useState} from 'react'
+import repos from '../public/data/repos.json'
+import ReactMarkdown from 'react-markdown'
+import moment from 'moment'
 import Head from 'next/head'
 
-const Changelog = (props) => {
-  const [repo, setRepo] = useState(null);
-  const [changelogData, setChangelogData] = useState([]);
+const Page = (props) => {
+  const [repo, setRepo] = useState(null)
+  const [changelogData, setChangelogData] = useState([])
 
   useEffect(() => {
     if(repo) {
-      fetchData();
+      fetchData()
     }
 
-  }, [repo]);
+  }, [repo])
 
   useEffect(() => {
     const _repo = repos
       ? repos.find((item) => {
-        return item.name == 'coronator';
+        return item.name == 'coronator'
       })
-      : null;
+      : null
 
-    setRepo(_repo);
+    setRepo(_repo)
 
-  }, []);
+  }, [])
 
   async function fetchData() {
     try {
-      const response = await axios.get(`${repo.url}/releases`);
+      const response = await axios.get(`${repo.url}/releases`)
 
       const _changelogData = response.data.map((item) => {
         const {
@@ -38,7 +38,7 @@ const Changelog = (props) => {
           tag_name,
           body,
           created_at
-        } = item;
+        } = item
 
         return {
           id,
@@ -46,13 +46,13 @@ const Changelog = (props) => {
           tag_name,
           body,
           created_at
-        };
-      });
+        }
+      })
 
-      setChangelogData([..._changelogData]);
+      setChangelogData([..._changelogData])
 
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
   }
 
@@ -60,24 +60,24 @@ const Changelog = (props) => {
    * @returns {string}
    */
   function badgeClass(type = '') {
-    let baseClass = 'inline-block px-3 py-1 font-semibold tracking-wider rounded-md';
+    let baseClass = 'inline-block px-3 py-1 font-semibold tracking-wider rounded-md'
 
-    let colorClass = '';
+    let colorClass = ''
     switch(type) {
       case 'new':
-        colorClass = 'bg-green-500 text-white';
-        break;
+        colorClass = 'bg-green-500 text-white'
+        break
 
       case 'improved':
-        colorClass = 'bg-blue-500 text-white';
-        break;
+        colorClass = 'bg-blue-500 text-white'
+        break
 
       default:
-        colorClass = 'bg-gray-500 text-gray-100';
-        break;
+        colorClass = 'bg-gray-500 text-gray-100'
+        break
     }
 
-    return `${baseClass} ${colorClass}`;
+    return `${baseClass} ${colorClass}`
   }
 
   return (
@@ -123,4 +123,4 @@ const Changelog = (props) => {
   )
 }
 
-export default Changelog
+export default Page

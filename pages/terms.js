@@ -23,15 +23,15 @@ const Blog = ({ content, data }) => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Page
 
-Blog.getInitialProps = async (context) => {
-  const { blog } = context.query;
-  const content = await import('../public/data/ToS.md');
-  const data = matter(content.default);
+Page.getInitialProps = async (context) => {
+  const { blog } = context.query
+  const content = await import('../public/data/ToS.md')
+  const data = matter(content.default)
 
-  return { ...data };
-};
+  return { ...data }
+}
