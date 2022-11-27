@@ -29,13 +29,15 @@ const Provider = (props) => {
           login,
           avatar_url,
           url,
+          html_url,
         } = contributor;
 
         return {
           id,
           login,
           avatar_url,
-          url
+          url,
+          html_url
         };
       });
 
