@@ -20,7 +20,7 @@ const Contributor = (props) => {
       }}>
         {contributor.login}
       </div>
-      <a href={contributor.html_url}>
+      <a href={contributor.html_url} target="_blank">
         <div className="m-3 w-20 flex flex-col items-center">
           <div className="h-16 w-16 rounded-md overflow-hidden shadow-lg">
             <img src={contributor.avatar_url} alt="contributor..." className="w-full h-full object-center object-cover"/>
