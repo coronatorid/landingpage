@@ -35,6 +35,7 @@ Contributor.propTypes = {
   contributor: PropTypes.shape({
     login: PropTypes.string,
     avatar_url: PropTypes.string,
+    html_url: PropTypes.string,
   })
 }
 
