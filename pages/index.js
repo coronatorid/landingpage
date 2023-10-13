@@ -1,9 +1,10 @@
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext, useEffect } from 'react'
 import Head from 'next/head'
-import Contributors from '../components/Contributors';
-import ShowcaseAppSlider from '../components/ShowcaseAppSlider';
+import Link from 'next/link'
+import Contributors from '../components/Contributors'
+import ShowcaseAppSlider from '../components/ShowcaseAppSlider'
 
-const Index = (props) => {
+const Page = (props) => {
   const [services, _] = useState([
     {
       title: 'Location Tracking',
@@ -17,7 +18,7 @@ const Index = (props) => {
       title: 'Secure',
       desc: 'Kami menggunakan best practice keamanan seperti oauth, OTP dan hashing untuk data-data penting yang masuk kedalam basis data coronator.'
     },
-  ]);
+  ])
 
   return (
     <>
@@ -40,11 +41,13 @@ const Index = (props) => {
             </p>
             <div className="text-center">
               <a href="#" className="inline-block h-16">
-                <img src="/images/google-play-badge-comingsoon.png" alt="download google play" className="h-full w-auto" />
+                <img src="/images/google-play-badge.png" alt="download google play" className="h-full w-auto" />
               </a>
             </div>
             <div className="container text-center underline">
-              <a href="/changelog">See Changelog</a>
+              <Link href="/changelog">
+                <a>See Changelog</a>
+              </Link>
             </div>
           </div>
         </div>
@@ -85,7 +88,7 @@ const Index = (props) => {
             width="560"
             height="315"
             src="https://www.youtube.com/embed/jibQJOR1zB4"
-            frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            frameBorder="0" allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture"
             allowFullScreen={true}>
           </iframe>
         </div>
@@ -112,4 +115,4 @@ const Index = (props) => {
   )
 }
 
-export default Index;
+export default Page

@@ -1,4 +1,11 @@
-const CrewIndex = (props) => {
+import { useContext, useEffect } from "react"
+import userApi from '../../services/api/userApi'
+import useAccessToken from "../../hooks/useAccessToken"
+import Link from 'next/link'
+
+const Page = (props) => {
+  const accessToken = useAccessToken()
+
   return (
     <>
       hello from crew
@@ -6,6 +13,6 @@ const CrewIndex = (props) => {
   )
 }
 
-CrewIndex.layout = 'crew';
+Page.layout = 'crew'
 
-export default CrewIndex;
+export default Page
